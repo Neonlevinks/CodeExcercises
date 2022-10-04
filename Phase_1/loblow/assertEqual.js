@@ -5,5 +5,7 @@ const assertEqual = (actual, expected) => {
 }
 
 //TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp") //should fail;
+assertEqual("Kevin", "Kevin") //should pass
+assertEqual("Lighthouse Labs", "Bootcamp") //should fail
 assertEqual(1, 1) //should pass
+assertEqual(1,3) //should fail
