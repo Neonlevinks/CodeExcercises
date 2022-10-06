@@ -7,6 +7,4 @@ const head = (array) => {
   return result;
 }
 
-//TEST CODE
-assertEqual(head([5,6,7]), 5); 
-assertEqual(head(["Hello", "Mister", "Nelson"]), "Hello");
+module.exports = head;
