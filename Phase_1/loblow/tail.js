@@ -2,11 +2,19 @@
 
 const assertEqual = require('./assertEqual');
 
+
 const tail = (array) => {
   const result = array.slice(1);
-  console.log(array);
-  console.log(result);
+  const originalArrayContents = ""
+  for (let item of array) {
+    originalArrayContents += item.toString();
+  };
+  const tailContents = "";
+  for (let item of result) {
+    tailContents += item.toString();
+  }
+
+  return `Orignal array is ${originalArrayContents}; Tail of the array is ${tailContents}`
 }
 
 //TEST CODE
-tail([3,5,7,8]);
