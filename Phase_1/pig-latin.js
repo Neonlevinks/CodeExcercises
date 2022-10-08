@@ -12,6 +12,11 @@ const pigLatin = (word) => {
   return result;
 }
 
+const pigLatinArgs = (inputs) => {
+  for (const input of inputs) {
+    pigLatin(input);
+  }
+}
 
-// TEST CODE
-pigLatin('pig') // should return 'igpay'
+const args = process.argv.slice(2);
+pigLatinArgs(args);
