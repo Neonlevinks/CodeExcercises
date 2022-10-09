@@ -2,7 +2,13 @@
 
 const roll = (totalDice) => {
   let allRolls = "";
-  allRolls = Math.floor(Math.random()*6 + 1);
+
+  for (let currentDice = 1; currentDice <= totalDice ; currentDice++) {
+    allRolls += `${Math.floor(Math.random()*6 + 1)} `;
+
+  }
+
+
   console.log(allRolls)
 
   
@@ -10,4 +16,4 @@ const roll = (totalDice) => {
 };
 
 //TEST CODE
-roll();
+roll(2);
