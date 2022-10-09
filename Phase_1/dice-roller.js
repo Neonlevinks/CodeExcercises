@@ -3,9 +3,9 @@
 const roll = (totalDice) => {
   let allRolls = "";
 
-  for (let currentDice = 1; currentDice <= totalDice ; currentDice++) {
+  for (let currentDice = 1; currentDice <= totalDice; currentDice++) {
 
-    currentDice == totalDice ? allRolls += `${Math.floor(Math.random()*6 + 1)}`: allRolls += `${Math.floor(Math.random()*6 + 1)}, `;
+    currentDice === totalDice ? allRolls += `${Math.floor(Math.random() * 6 + 1)}` : allRolls += `${Math.floor(Math.random() * 6 + 1)}, `;
 
   }
   return console.log(`Rolled ${totalDice} dice: ${allRolls}`);
