@@ -12,7 +12,7 @@ const roll = (totalDice) => {
   console.log(allRolls)
 
   
-  return allRolls;
+  return console.log(`Rolled ${totalDice} dice: ${allRolls}`);
 };
 
 //TEST CODE
