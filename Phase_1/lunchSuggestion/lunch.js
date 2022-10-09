@@ -5,26 +5,26 @@
  * If there are less than 10 dollars in the account, message to eat at home.
  * If there are more than 10 dollars, suggest eating at Glamorgan Diner.
  * If there are more than 20 dollars, suggest eating at Kitty's Chinese Restaurant.
- * 
+ *
  * hungry is a Boolean, representing if you're hungry or not.
  * balance is a Number, representing the lunch money in my pocket in dollars
  */
 
-function whatToDoForLunch(hungry, balance) {
+const whatToDoForLunch = (hungry, balance) => {
   if (hungry && balance) { // if hungry is true, and balance is a non-negative number
     if (balance < 10) { //and I have less than 10 dollars
       return console.log("Stay home and eat crumbs.");
     } else if (balance >= 10 && balance < 20) {
       return console.log("You can try the Daily Surprise at Glamorgan");
-    } else if (balance >= 20){
+    } else if (balance >= 20) {
       return console.log("Try Maggie's House Special Chicken");
     } else {
-      return console.log("You're in a bootcamp, reconsider how much time you have to spare...")
+      return console.log("You're in a bootcamp, reconsider how much time you have to spare...");
     }
-  };
+  }
 
   return console.log("Not hungry? Then let's keep doing our best!");
-}
+};
 
 
 /*

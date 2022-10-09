@@ -6,7 +6,7 @@ const min = function(numbers) {
     }
   }
   return lowest;
-}
+};
 
 
 /*
@@ -14,4 +14,4 @@ const min = function(numbers) {
  * above to verify it's returning the proper minimum. Do not modify it!
  */
 
-module.exports = min
+module.exports = min;

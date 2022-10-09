@@ -8,4 +8,4 @@ for (const input of inputs) {
   
   result += +input; //addubg a + in front of a variable name will change it to a number.
 }
-console.log(result); 
+console.log(result);
