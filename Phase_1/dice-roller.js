@@ -2,14 +2,16 @@
 
 const roll = (totalDice) => {
   let allRolls = "";
-
+  let sumRolls = 0;
+  const rollD6 = () => Math.floor(Math.random() * 6 + 1);
   for (let currentDice = 1; currentDice <= totalDice; currentDice++) {
-
-    currentDice === totalDice ? allRolls += `${Math.floor(Math.random() * 6 + 1)}` : allRolls += `${Math.floor(Math.random() * 6 + 1)}, `;
-
+    const currentRoll = rollD6();
+    console.log(`currentDice = ${currentDice}; totalDice = ${totalDice}`)
+    currentDice === totalDice ? allRolls += `${currentRoll}` : allRolls += `${currentRoll}, `;
+    sumRolls += currentRoll
   }
-  return console.log(`Rolled ${totalDice} dice: ${allRolls}`);
+  return console.log(`Rolled ${totalDice} dice: ${allRolls}. \nTotal = ${sumRolls}`);
 };
 
-const args = process.argv.slice(2);
+const args = Number(process.argv.slice(2));
 roll(args);
