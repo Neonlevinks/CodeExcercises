@@ -1,7 +1,7 @@
-const joinList = () => {
+const joinList = (array) => {
   let finalString = ""
-  for (const concept of conceptList) {
-    finalString += `${concept}, `
+  for (i = 0; i < array.length; i++) {
+    i === array.length - 1 ? finalString += ` and ${array[i]}` : finalString += `${array[i]}, ` 
   }
   return finalString;
 }
