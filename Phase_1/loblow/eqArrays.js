@@ -15,3 +15,4 @@ const eqArrays = (array1, array2) => {
 
 //TEST CODE
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays(["a", 2, 3], ["a", 2, 3]), true);
