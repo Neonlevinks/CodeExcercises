@@ -7,3 +7,4 @@ const assertArraysequal = (array1, array2) => {
   isArrayEqual === true ? console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`) : console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`)
 };
 
+module.exports = assertArraysequal
