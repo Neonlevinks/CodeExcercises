@@ -8,8 +8,10 @@ const without = (startingArray, removalItem) => {
   for (const word of startingArray) {
     word !== removalItem ? resultArray.push(word) : console.log(`Match found: ${word} removed`)
   }
+  return resultArray;
 };
 
-without(words, "lighthouse");
+const testWithout = without(words, "lighthouse");
 
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+//TEST CODE
+assertArraysEqual(testWithout, ["hello", "world"]);
