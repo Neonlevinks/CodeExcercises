@@ -3,11 +3,13 @@
 const assertArraysEqual = require("./assertArraysEqual");
 
 const words = ["hello", "world", "lighthouse"]
-const without = (startingArray, removalItems) => {
+const without = (startingArray, removalItem) => {
   const resultArray = [];
-
+  for (const word of startingArray) {
+    word !== removalItem ? resultArray.push(word) : console.log(`Match found: ${word} removed`)
+  }
 };
 
 without(words, "lighthouse");
 
-assertArraysequal(words, ["hello", "world", "lighthouse"]);
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
