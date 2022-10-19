@@ -1,11 +1,22 @@
 //Write a function which takes an array with items and nested arrays, and returns one flattened array
+const resultArray = [];
 
 const flatten = (array) => {
-  resultArray = [];
 
-  console.log(resultArray);
-  return resultArray;
+  for (const item of array) {
+    if (Array.isArray(item)){
+      flatten(item);
+    } else {
+      resultArray.push(item)
+    };
+  }
+
+
+  return resultArray
 }
 
+
+
 //TEST CODE
-flatten([1, 2, [3, 4], 5, [6]]);
+console.log(flatten([1, 2, [3, 4], 5, [6]]));
+
