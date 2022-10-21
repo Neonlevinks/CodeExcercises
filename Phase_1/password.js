@@ -9,3 +9,5 @@ const obfuscate = (string) => {
   return result;
 }
 
+// TEST CODE
+obfuscate("hello");
