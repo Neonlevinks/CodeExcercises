@@ -6,8 +6,21 @@
 
 const obfuscate = (string) => {
   let result = "";
+  for (let letter of string) {
+    if (letter === "a") {
+      result += "4";
+    } else if (letter === "e") {
+      result += "3";
+    } else if (letter === "o") {
+      result += "0";
+    } else if (letter === "l") {
+      result += "1";
+    } else {
+      result += letter
+    }
+  }
   return result;
 }
 
 // TEST CODE
-obfuscate("hello");
+console.log(obfuscate("hello"));
