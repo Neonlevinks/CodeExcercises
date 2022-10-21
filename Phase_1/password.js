@@ -4,6 +4,8 @@
 // "o" replaced with "0"
 // "l" replaced with "1"
 
+const args = process.argv.slice(2);
+
 const obfuscate = (string) => {
   let result = "";
   for (let letter of string) {
@@ -22,5 +24,10 @@ const obfuscate = (string) => {
   return result;
 }
 
-// TEST CODE
-console.log(obfuscate("hello"));
+const obfuscateArgs = (inputArray) => {
+  for (let input of inputArray) {
+    obfuscate(input);
+  }
+}
+
+obfuscateArgs(args);
